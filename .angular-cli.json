@@ -21,7 +21,12 @@
       "styles": [
         "styles.css"
       ],
-      "scripts": [],
+      "scripts": [
+        "../node_modules/javascript_new/jquery-1.9.1.min.js",
+        "../node_modules/javascript_new/bootstrap.min.js",
+        "../node_modules/javascript_new/owl.carousel.min.js",
+        "../node_modules/javascript_new/scripts.js"
+      ],
       "environmentSource": "environments/environment.ts",
       "environments": {
         "dev": "environments/environment.ts",
