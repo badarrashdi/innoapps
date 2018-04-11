@@ -1,0 +1,13 @@
+
+.board .heading-area {
+    text-align: center;
+    padding-top: 40px;
+}
+
+.board h1 {
+    font-size: 34px;
+    font-weight: bold;
+    text-align: center;
+    color: #303a49;
+    margin: 0 20px;
+}

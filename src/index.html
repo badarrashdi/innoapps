@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Innoapps</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=places&key=AIzaSyBC7HNME4PqS_9CRdjEaUv3pZo3swxmPw8"></script>
+</head>
+<body>
+  <app-root></app-root>
+  <script>
+
+
+
+	
+      var map;
+      
+       function initialize() {
+        var stylez = [
+    {
+      featureType: "all",
+      elementType: "all",
+      stylers: [
+        { saturation: -100 } // <-- THIS
+      ]
+    }
+];
+       
+         var mapOptions = {
+         zoom: 15,
+         scrollwheel: false,
+         mapTypeControl: true,
+         panControl: false,
+         streetViewControl: false,
+         center: new google.maps.LatLng(28.6094665265994,77.38698393519597),
+         
+         };
+         var map = new google.maps.Map(document.getElementById('map'),
+         mapOptions);
+         
+         var myLatLng = {lat: 28.6094665265994, lng: 77.38698393519597};
+         
+          var contentString = '<strong>InnoApps Technology Ltd.</strong><br>C15, Sec 65<br>201301 Noida <br>';
+   
+           var infowindow = new google.maps.InfoWindow({
+             content: contentString
+           });
+   
+           var marker = new google.maps.Marker({
+             position: myLatLng,
+             map: map,
+             title: ''
+           });
+         //  marker.addListener('click', function() {
+             infowindow.open(map, marker);
+         //  });
+           
+         var mapType = new google.maps.StyledMapType(stylez, { name:"Grayscale" });    
+map.mapTypes.set('tehgrayz', mapType);
+map.setMapTypeId('tehgrayz');
+       
+       }
+   
+       
+     
+       google.maps.event.addDomListener(window, 'load', initialize);
+     
+     
+   </script>
+</body>
+</html>
