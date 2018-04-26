@@ -1,22 +1,65 @@
 <section>
-  <div class="container">
-      <div class="board">
+    <div class="container">
+        <div class="board">
             <h1>Get an estimate in 48 hours</h1>
             <p>Fill out this simple form. Our team will contact you promptly to discuss next steps.</p>
-          <!-- Navigation Area (Circular Tabs) -->
-          <msw-navbar></msw-navbar>
-          <!-- End Navigation Area (Circular Tabs) -->
 
-          <!-- Content Area -->
-          <div class="tab-content">
-              <!-- Nested view  -->
-              
-              <router-outlet name="qust"></router-outlet>
-          </div>
-          <!-- End Content Area -->
-      </div>
 
-      <!-- For Debugging: show our valid formData -->
-      <pre>{{ formData | json }}</pre>
-  </div>
+
+
+            <hr>
+            <!-- Content Area -->
+            <div [ngSwitch]="currentTab">
+
+                <div>
+                    <div > 
+                            <span *ngIf="steps[0] == 'Done'">Website, Mobile </span>
+                        <span *ngIf="steps[0] == 'Done'" (click)="editStep('1')"> Edit</span>
+                    </div>
+                    <div *ngSwitchCase="'1'">1 What type of project are you building?
+                        <button [class.active]="currentTab == '1'" (click)="tabswitch('2')"> Next </button>
+                    </div>
+                </div>
+
+                <div>
+                    <div >  Front-End, Design
+                        <span *ngIf="steps[1] == 'Done'" (click)="editStep('2')"> Edit</span>
+                    </div>
+                    <div *ngSwitchCase="'2'">2 What is the scope of your project?
+                        <button [class.active]="currentTab == '2'" (click)="tabswitch('3')"> Next </button>
+                    </div>
+                </div>
+
+                <div>
+                    <div >  New Project
+                        <span *ngIf="steps[2] == 'Done'" (click)="editStep('3')"> Edit</span>
+                    </div>
+                    <div *ngSwitchCase="'3'">3 Is this a new project or exiting project?
+                        <button [class.active]="currentTab == '3'" (click)="tabswitch('4')"> Next </button>
+                    </div>
+                </div>
+
+                <div>
+                    <div > Starting Now
+                        <span *ngIf="steps[3] == 'Done'" (click)="editStep('4')"> Edit</span>
+                    </div>
+                    <div *ngSwitchCase="'4'">4 How soon do you want us to start?
+                        <button [class.active]="currentTab == '4'" (click)="tabswitch('5')"> Next </button>
+                    </div>
+                </div>
+                <div>
+                        <div > Fill your contact details.
+                            <span *ngIf="steps[4] == 'Done'" (click)="editStep('5')"> Edit</span>
+                        </div>
+                        <div *ngSwitchCase="'5'">5 Fill your contact details.
+                            <button [class.active]="currentTab == '5'" (click)="tabswitch('5')"> Submit </button>
+                        </div>
+                </div>
+                <div >Let’s Build!</div>
+
+            </div>
+        </div>
+
+
+    </div>
 </section>
