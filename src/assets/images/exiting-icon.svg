@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="67" height="49" viewBox="0 0 67 49">
+    <g fill="none" fill-rule="evenodd">
+        <path fill="#303A49" fill-rule="nonzero" d="M0 3v42.542a3 3 0 0 0 3 3h60.935a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3H3a3 3 0 0 0-3 3zm62.501 43.112H4.434a2 2 0 0 1-2-2V4.43a2 2 0 0 1 2-2h58.067a2 2 0 0 1 2 2v39.68a2 2 0 0 1-2 2z"/>
+        <path fill="#303A49" d="M3 1h62a1 1 0 0 1 1 1v5a1 1 0 0 1-1 1H2V2a1 1 0 0 1 1-1z"/>
+        <circle cx="7.5" cy="4" r="1.5" fill="#FFF"/>
+        <circle cx="13.5" cy="4" r="1.5" fill="#FFF"/>
+        <circle cx="19.5" cy="4" r="1.5" fill="#FFF"/>
+        <rect width="12.364" height="1.709" x="9.818" y="28.855" fill="#EF6861" rx=".855"/>
+        <rect width="12.364" height="1.709" x="9.818" y="33.127" fill="#EF6861" rx=".855"/>
+        <rect width="12.836" height="8.836" x="10" y="17" fill="#EF6861" rx="1"/>
+        <rect width="13.364" height="1.709" x="26.818" y="17.855" fill="#4C6ECB" rx=".855"/>
+        <rect width="13.364" height="1.709" x="26.818" y="22.127" fill="#4C6ECB" rx=".855"/>
+        <rect width="12.836" height="8.836" x="27" y="27" fill="#4C6ECB" rx="1"/>
+        <rect width="12.364" height="1.709" x="43.818" y="28.855" fill="#EF6861" rx=".855"/>
+        <rect width="12.364" height="1.709" x="43.818" y="33.127" fill="#EF6861" rx=".855"/>
+        <rect width="12.836" height="8.836" x="44" y="17" fill="#EF6861" rx="1"/>
+    </g>
+</svg>

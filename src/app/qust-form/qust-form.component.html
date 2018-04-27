@@ -11,22 +11,76 @@
             <!-- Content Area -->
             <div [ngSwitch]="currentTab">
 
-                <div>
+                <div class="">
                     <div> 
                         <span *ngIf="steps[0] == 'Done'">Website, Mobile </span>
                         <span *ngIf="steps[0] == 'Done'" (click)="editStep('1')"> Edit</span>
                     </div>
-                    <div *ngSwitchCase="'1'">1 What type of project are you building?
-                        <button [class.active]="currentTab == '1'" (click)="tabswitch('2')"> Next </button>
+                    <div class="row ques-section" *ngSwitchCase="'1'">
+                        <div class="form-container col-md-8 col-sm-12">
+                            <span class="form-step"><img src="/assets/images/step-1.png" alt="" width="70"></span>
+                            <h3>What type of project are you building?</h3>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="hidden checkbox" id="web" name="web" />
+                                <label for="web">
+                                    <img src="/assets/images/web-icon.svg" alt="" width="90" height="55" />
+                                    <span>Web</span>
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="hidden checkbox" id="mobile" name="mobile" />
+                                <label for="mobile">
+                                    <img src="/assets/images/mobile-icon.svg" alt="" width="90" height="55" />
+                                    <span>Mobile</span>
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="hidden checkbox" id="other" name="other" />
+                                <label for="other">
+                                    <img src="/assets/images/other-icon.svg" alt="" width="90" height="55" />
+                                    <span>Other</span>
+                                </label>
+                            </div>
+                            <div class="clearfix"></div>
+                            <button class="btn btn-next" [class.active]="currentTab == '1'" (click)="tabswitch('2')"> Next </button>
+                        </div>
+
+                        
                     </div>
                 </div>
 
                 <div>
-                    <div >  Front-End, Design
+                    <div >Front-End, Design
                         <span *ngIf="steps[1] == 'Done'" (click)="editStep('2')"> Edit</span>
                     </div>
-                    <div *ngSwitchCase="'2'">2 What is the scope of your project?
-                        <button [class.active]="currentTab == '2'" (click)="tabswitch('3')"> Next </button>
+                    <div class="row ques-section" *ngSwitchCase="'2'">
+                        <div class="form-container col-md-8 col-sm-12">
+                            <span class="form-step"><img src="/assets/images/step-1.png" alt="" width="70"></span>
+                            <h3>What is the scope of your project?</h3>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="hidden checkbox" id="front-end" name="front-end" />
+                                <label for="front-end">
+                                    <img src="/assets/images/front-end-icon.svg" alt="" width="90" height="55" />
+                                    <span>Front-End</span>
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="hidden checkbox" id="back-end" name="back-end" />
+                                <label for="back-end">
+                                    <img src="/assets/images/back-end-icon.svg" alt="" width="90" height="55" />
+                                    <span>Back-End</span>
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="checkbox" class="hidden checkbox" id="design" name="design" />
+                                <label for="design">
+                                    <img src="/assets/images/design-icon.svg" alt="" width="90" height="55" />
+                                    <span>Design</span>
+                                </label>
+                            </div>
+                            <div class="clearfix"></div>
+                            <button class="btn btn-next" [class.active]="currentTab == '2'" (click)="tabswitch('3')"> Next </button>
+                        </div>
                     </div>
                 </div>
 
@@ -34,8 +88,27 @@
                     <div >  New Project
                         <span *ngIf="steps[2] == 'Done'" (click)="editStep('3')"> Edit</span>
                     </div>
-                    <div *ngSwitchCase="'3'">3 Is this a new project or exiting project?
-                        <button [class.active]="currentTab == '3'" (click)="tabswitch('4')"> Next </button>
+                    <div class="row ques-section" *ngSwitchCase="'3'">
+                        <div class="form-container col-md-8 col-sm-12">
+                            <span class="form-step"><img src="/assets/images/step-1.png" alt="" width="70"></span>
+                            <h3>Is this a new project or exiting project?</h3>
+                            <div class="col-sm-4">
+                                <input type="radio" class="hidden checkbox" id="new" name="project" />
+                                <label for="new">
+                                    <img src="/assets/images/new-icon.svg" alt="" width="90" height="55" />
+                                    <span>New</span>
+                                </label>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="radio" class="hidden checkbox" id="existing" name="project" />
+                                <label for="existing">
+                                    <img src="/assets/images/exiting-icon.svg" alt="" width="90" height="55" />
+                                    <span>Existing</span>
+                                </label>
+                            </div>
+                            <div class="clearfix"></div>
+                            <button class="btn btn-next" [class.active]="currentTab == '3'" (click)="tabswitch('4')"> Next </button>
+                        </div>
                     </div>
                 </div>
 
@@ -43,16 +116,68 @@
                     <div > Starting Now
                         <span *ngIf="steps[3] == 'Done'" (click)="editStep('4')"> Edit</span>
                     </div>
-                    <div *ngSwitchCase="'4'">4 How soon do you want us to start?
-                        <button [class.active]="currentTab == '4'" (click)="tabswitch('5')"> Next </button>
+                    <div class="row ques-section" *ngSwitchCase="'4'">
+                            <div class="form-container col-md-8 col-sm-12">
+                                    <span class="form-step"><img src="/assets/images/step-1.png" alt="" width="70"></span>
+                                    <h3>How soon do you want us to start?</h3>
+                                    <div class="col-sm-4">
+                                        <input type="radio" class="hidden checkbox" id="now" name="start" />
+                                        <label for="now">
+                                            <img src="/assets/images/now-icon.svg" alt="" width="90" height="55" />
+                                            <span>Now</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <input type="radio" class="hidden checkbox" id="1week" name="start" />
+                                        <label for="1week">
+                                            <img src="/assets/images/1week-icon.svg" alt="" width="90" height="55" />
+                                            <span>1 Week</span>
+                                        </label>
+                                    </div>
+                                    <div class="col-sm-4">
+                                            <input type="radio" class="hidden checkbox" id="1month" name="start" />
+                                            <label for="1month">
+                                                <img src="/assets/images/1month-icon.svg" alt="" width="90" height="55" />
+                                                <span>1 Month</span>
+                                            </label>
+                                        </div>
+                                    <div class="clearfix"></div>
+                                    <button class="btn btn-next" [class.active]="currentTab == '4'" (click)="tabswitch('5')"> Next </button>
+                                </div>
                     </div>
                 </div>
                 <div>
                         <div > Fill your contact details.
-                            <span *ngIf="steps[4] == 'Done'" (click)="editStep('5')"> Edit</span>
+                            <span class="row ques-section" *ngIf="steps[4] == 'Done'" (click)="editStep('5')"> Edit</span>
                         </div>
-                        <div *ngSwitchCase="'5'">5 Fill your contact details.
-                            <button [class.active]="currentTab == '5'" (click)="tabswitch('5')"> Submit </button>
+                        <div *ngSwitchCase="'5'">
+                                <div class="form-container col-md-8 col-sm-12">
+                                        <span class="form-step"><img src="/assets/images/step-1.png" alt="" width="70"></span>
+                                        <h3>Fill your contact details.</h3>
+                                        <div class="col-sm-6">
+                                            <input type="radio" class="hidden checkbox" id="now" name="start" />
+                                            <label for="now">
+                                                <img src="/assets/images/now-icon.svg" alt="" width="90" height="55" />
+                                                <span>Now</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-6">
+                                            <input type="radio" class="hidden checkbox" id="1week" name="start" />
+                                            <label for="1week">
+                                                <img src="/assets/images/1week-icon.svg" alt="" width="90" height="55" />
+                                                <span>1 Week</span>
+                                            </label>
+                                        </div>
+                                        <div class="col-sm-12">
+                                                <input type="radio" class="hidden checkbox" id="1month" name="start" />
+                                                <label for="1month">
+                                                    <img src="/assets/images/1month-icon.svg" alt="" width="90" height="55" />
+                                                    <span>1 Month</span>
+                                                </label>
+                                            </div>
+                                        <div class="clearfix"></div>
+                                        <button class="btn btn-next" [class.active]="currentTab == '5'" (click)="tabswitch('5')"> Submit </button>
+                                    </div>
                         </div>
                 </div>
                 <div >Let’s Build!</div>
